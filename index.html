@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение стилей Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Скрипты PopperJS и Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Одностраничный сайт</title>
+    <style>
+        /* Базовые стили для тела документа */
+        body {
+            position: relative;
+        }
+
+        /* Оформление главной секции (jumbotron) */
+        .jumbotron {
+            background-image: linear-gradient(to bottom right, rgba(255, 255, 255, .3), rgba(255, 255, 255, .5)), url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+
+        /* Эффекты карточек услуг */
+        .card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            /* Увеличение размера при наведении */
+        }
+
+        /* Класс для анимированных элементов */
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        /* Типы анимаций */
+        .bounceInDown {
+            animation-name: bounceInDown;
+        }
+
+        .fadeInUp {
+            animation-name: fadeInUp;
+        }
+
+        .zoomIn {
+            animation-name: zoomIn;
+        }
+
+        .slideInLeft {
+            animation-name: slideInLeft;
+        }
+
+        /* Ключевые кадры для каждой анимации */
+        @keyframes bounceInDown {
+            ...
+        }
+
+        @keyframes fadeInUp {
+            ...
+        }
+
+        @keyframes zoomIn {
+            ...
+        }
+
+        @keyframes slideInLeft {
+            ...
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarExample">
+
+    <!-- Навигационная панель (меню сверху) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm" id="navbarExample">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-white" href="#">Создание сайтов под ключ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#map">Где находимся</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Связаться с нами</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная секция (верхняя часть сайта) -->
+    <div class="jumbotron jumbotron-fluid mt-5 p-5" id="home">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bolder animated bounceInDown delay-1s">Добро пожаловать на наш сайт!</h1>
+            <p class="lead animated fadeInUp delay-2s">Мы предлагаем качественные услуги и доступные цены.</p>
+            <a href="#services" class="btn btn-outline-light rounded-pill px-4 py-2 mt-4">Узнать подробнее</a>
+        </div>
+    </div>
+
+    <!-- Раздел услуг (карточки с описанием тарифов) -->
+    <div class="py-5 my-5" id="services">
+        <div class="container">
+            <h2 class="mb-4 text-center fw-bold animated zoomIn delay-1s">Наши услуги</h2>
+            <div class="row g-4">
+                <!-- Первая карточка -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="service1.jpg" alt="Service 1" class="card-img-top img-fluid w-100 object-fit-cover"
+                            style="height: 200px;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Базовая услуга</h5>
+                            <p class="card-text">Описание базовой услуги...</p>
+                            <strong>$145/ мес</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вторая карточка -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="service2.jpg" alt="Service 2" class="card-img-top img-fluid w-100 object-fit-cover"
+                            style="height: 200px;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Стандартная услуга</h5>
+                            <p class="card-text">Описание стандартной услуги...</p>
+                            <strong>$199 / мес</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Третья карточка -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="service3.jpg" alt="Service 3" class="card-img-top img-fluid w-100 object-fit-cover"
+                            style="height: 200px;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Премиальная услуга</h5>
+                            <p class="card-text">Описание премиальной услуги...</p>
+                            <strong>$299 / мес</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Интерактивная карта Яндекс -->
+    <div class="my-5 py-5" id="map">
+        <div class="container">
+            <h2 class="mb-4 text-center fw-bold animated slideInLeft delay-1s">Наш офис находится здесь:</h2>
+            <div id="yandexMap" style="width: 100%; height: 400px; margin-bottom: 2rem;"></div>
+
+            <!-- Интеграция скрипта Яндекс.Карт -->
+            <script async defer
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3d38b2c61a43007f52916811602361f1fe5e13aeb175b042115a779e82409ecc&lang=ru_RU&scroll=true"></script>
+        </div>
+    </div>
+
+    <!-- Подвал сайта (контакты и ссылка на пользовательское соглашение) -->
+    <footer class="bg-dark text-light py-4" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="fw-bold">Свяжитесь с нами</h5>
+                    <p><i class="bi bi-phone me-2"></i>Телефон: +7 (952) 369-87-45</p>
+                    <p><i class="bi bi-envelope me-2"></i>Email: info@example.com</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <h5 class="fw-bold">Пользовательское соглашение</h5>
+                    <p><a href="#" target="_blank" class="text-decoration-none link-light">Ознакомьтесь с нашим
+                            соглашением</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипт для инициализации карты Яндекс -->
+    <script>
+        ymaps.ready(function () {
+            var map = new ymaps.Map("yandexMap", {
+                center: [59.93863, 30.31413], // Координаты центра карты (Санкт-Петербург)
+                zoom: 16
+            });
+
+            // Добавляем метку на карту
+            var placemark = new ymaps.Placemark([59.93863, 30.31413], {hintContent: 'ул. Добровольского, д. 56'}, {});
+            map.geoObjects.add(placemark);
+        });
+    </script>
+
+</body>
+
+</html>
